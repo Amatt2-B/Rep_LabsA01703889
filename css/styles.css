@@ -1,0 +1,51 @@
+
+body {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  padding: 4em 1em;
+  background-color: black;
+  color: whitesmoke;
+ }
+
+ header{
+
+  height: 16vh;
+  width: 100%;
+  max-width: 900px;
+  margin: 20px 0px;  
+ }
+
+ header #logo{
+    height: 16vh;
+    float: left;
+
+ }
+
+header #logo img{
+  height: 16vh;
+}
+
+header .menu{
+  height: 16vh;
+  float: right;
+}
+
+header .menu ul li{
+  list-style: none;
+  float: left;
+}
+
+header .menu ul li a{
+  background: aquamarine ;
+  text-decoration: none;
+  padding: 10px 15px;
+  color: pink;
+  font-size: 1rem;
+}
+
+header .menu ul li a:hover{
+  background:purple ;
+  color: green;
+}
