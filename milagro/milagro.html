@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+    <head>
+        <title>El milagro</title>
+        <link rel="stylesheet" href="milagro.min.css">
+    </head>
+    <body>
+        <h1>El milagro sobre el hielo</h1>
+        <!-- estilo en línea -->
+        <p style="color: blue">
+            Cuando Estados Unidos ganó el oro en las olimpiadas de invierno de 1980. 
+        </p>
+        <p class="brooks">
+            Herb Brooks fue el entrenador ganador de la selección de Estados Unidos, y fue la primera vez que Rusia perdió en 20 años.
+        </p>
+        <p id="craig">
+            <a href="https://en.wikipedia.org/wiki/Jim_Craig_(ice_hockey)" target="_blank">Jimmy Craig</a> fue el <span id="portero" onclick="muestra_imagen()">portero</span> titular de la selección nacional. 
+        </p>
+        <div id="imagen_portero"></div>
+
+        <div>
+            <label for="jugador">Escribe el nombre de tu jugador favorito: </label>
+            <input id="jugador" type="text">
+            <div id="respuesta"></div>
+        </div>
+
+        <div>
+            <button id="muestra_foto_coach">Ver foto de Herb Brooks</button>
+            <div id="foto_coach"></div>
+        </div>
+        
+        <script src="milagro.js"></script> 
+    </body>
+</html>

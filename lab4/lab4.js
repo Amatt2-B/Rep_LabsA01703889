@@ -1,4 +1,4 @@
-// Ejercio 1, solicitar un numero y crear una tabla acorde al numero de entrada
+// ejercicio 1, solicitar numero y crear tabla de acuerdo al numero recibido
 // Solicitar numero
 let numero_solicitado = prompt("Ingresa un numero: ");
 
@@ -101,39 +101,3 @@ function inverso_numero(numero){
   return null;
 }
 document.getElementById("inverso").innerHTML = inverso_numero(numero);
-
-// Ejercio 6, poo
-class Vuelo{
-  constructor(origen, destino, linea){
-    this.origen = origen;
-    this.destino = destino;
-    this.linea = linea;
-  }
-  mostrar(){
-    return `${this.origen} es el pais de origen, con un destino a ${this.destino}, operado por ${this.linea} actualmente` ;
-  }
-}
-
-class Aerlolinea extends Vuelo{
-  constructor(origen, destino, linea, estado){
-    super(origen, destino, linea);
-    this.estado = estado;
-  }
-  operando(){
-    return `Origen: ${this.origen}: Destino a ${this.destino}  Aerolinea: ${this.linea}, se encuentra ${this.estado}`;
-  }
-}
-
-const vuelo1 = new Vuelo('Francia', 'Belgica', 'Iberia');
-const vuelo2 = new Vuelo('Francia', 'Mexico', 'AirFrance');
-const vuelo3 = new Aerlolinea('Francia', 'Mexico', 'Iberia', "Embarcando");
-const vuelo4 = new Aerlolinea('Francia', 'Belgica', 'AirFrance', 'Cancelado');
-console.log(vuelo3.operando());
-console.log(vuelo4.operando());
-
-document.write("<h3> Ejercicio 4: Vuelos partientes del Aeropuerto Paris-Charles de Gaulle </h3>");
-document.write("Vuelo 1-> " + vuelo1.mostrar());
-document.write("</br> Vuelo 2-> " + vuelo2.mostrar());
-document.write("<h5>Estado de vuelos: </h5>");
-document.write("Vuelo 1-> " + vuelo3.operando());
-document.write("</br> Vuelo 2-> " + vuelo4.operando());
