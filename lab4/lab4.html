@@ -1,15 +1,83 @@
 <!DOCTYPE html>
-<html lang="es-mx">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundamentos</title>
+    <title>Laboratorio 4 y 5</title>
+    <link rel="stylesheet" href="./lab4.css">
 </head>
+
 <body>
+        <h1>Laboratorio 4 y 5</h1>
+
+
+            <h2>Problema 1: Tabla de Cuadrados</h2>
+            <button id="problema1">Contestar</button>
+
+            <h2>Problema 2: Suma de Números</h2>
+            <button id="problema2">Contestar</button>
+            <p id="res_prob2"></p>
+
+            <h2>Problema 3: Contador</h2>
+            <p id="problema3"></p>
+            <p id="res_prob3"></p>
+
+            <h2>Problema 4: Promedio</h2>
+            <p id="problema4"></p>
+            <p id="res_prob4"></p>
+
+            <h2>Problema 5: Inverso</h2>
+            <div id="resultados5"></div>
+
+<section id="preguntas">
+
+    <p>Preguntas Laboratorio 4</p>
+    <ul>
+        <li>¿Qué diferencias y semejanzas hay entre Java y JavaScript?
+        </li>
+        <p> Java es un lenguaje orientado a objetos puros, mientras que 
+            Javascript está basado en prototipos y puede emular esta programación</p>
+        <li>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)
+        </li>
+            <ul>
+                <li>getDate(): Devuelve el día del mes. Número entre 1 y 31</li>
+                <li>getDay(): Devuelve el día de la semana. Entre 0 (domingo) y 6 (sábado)</li>
+                <li>getFullYear(): Devuelve el año con 4 dígitos</li>
+                <li>getMilliseconds(): Devuelve los milisegundos entre 0 y 9999</li>
+                <li>getMinutes(): Devuelve los minutos. Entre 0 y 59</li>
+
+            </ul>
+        <li>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)
+        </li>
+            <ul>    
+                <li>map(): Permite recorrer el array y modificar los elementos presentes en él, retornando un nuevo array con la misma longitud que el original.</li>
+                <li>filter(): Recorre el array y retorna un nuevo array con aquellos elementos que pasen una determinada condición.</li>
+                <li>forEach(): Permite iterar el contenido de un array. Recibe un callback que toma como parámetro el elemento actual de la iteración y el indice del mismo.</li>
+                <li>find(): Recorre el array y retorna la primera coincidencia del elemento que se busca.</li>
+                <li>sort(): Ordena los elementos del array y retorna el arreglo ordenado. Los elementos se ordenarán en orden ascendente (de la A a la Z) por defecto.</li>
+
+            </ul>
+        <li>¿Cómo se declara una variable con alcance local dentro de una función?
+        </li>
+        <p>Let es una palabra reservada que se utiliza para declarar variables locales</p>
+        <li>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?
+        </li>
+        <p>var dentro de la función, se crea como una variable local, pero esto permite que el usuario maneje esta variable a su gusto.</p>
+
+    </ul>
+
+</section>
+           
+    <script src="./lab4.js"></script>  
     
-
-    <script src="./lab4.js"></script> 
-
+    <footer>
+        <h4>Adrian Matute Beltran  A01703889</h4>
+        <h4>a01703889@tec.mx</h4>
+        <h4><a href="https://code.visualstudio.com/">Visita el blog de Visual Studio Code</a></h4>
+      </footer>
+      
+    
 </body>
+
 </html>

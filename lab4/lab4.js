@@ -1,103 +1,92 @@
-// ejercicio 1, solicitar numero y crear tabla de acuerdo al numero recibido
-// Solicitar numero
-let numero_solicitado = prompt("Ingresa un numero: ");
-
-// Creacion de tabla
-function tabla_numeros() {
-    let resultado = "<table>";
-    for (let i = 1; i <= numero_solicitado; i++) {
-        resultado += "<tr>";
-        resultado += "<td>" + i + "</td>" + "<td>" + i*i + "</td>" + "<td>" + i*i*i + "</td>";
-        resultado += "</tr>"
+let boton_prob1 = document.getElementById("problema1");
+function prob1(){
+    document.write("Reinicia la pagina para regresar");
+    let num = prompt("Ingresa un número: ");
+    document.write("<style> table,th,td{border: 1px solid black;}</style>")
+    document.write("<table><thead><tr><th> N </th><th> N^2 </th><th> N^3 </th></tr></thead>");
+    for (let i = 1; i <= num; i++){
+        document.write("<tr><th>" + i + "</th><th>" + i*i + "</th><th>" + i*i*i + "</th></tr>")
     }
-    resultado += "</table>";
-    return resultado;
+    document.write("</table>");
 }
 
-// Del HTML obtenemos el div de tabla para imprimir
-document.write(tabla_numeros());
+let boton_prob2 = document.getElementById("problema2");
+function prob2(){
+    let num1 = Math.floor(Math.random() * 20);
+    let num2 = Math.floor(Math.random() * 20);
+    let resultado = num1 + num2;
 
-// Ejercio 2, suma de dos numeros aleatorios
-function numeros_aleatorios(){
-  // prompt recibe texto, entonces con parseInt pasamos ese texto a numero
-  // creamos los aleatorios y los sumamos
-  var num1 = parseInt(Math.random()*100);
-  var num2 = parseInt(Math.random()*100);
-  let suma = num1 + num2;
-  // sacamos cuanto tiempo tardo en contestrar
-  var tiempo_incial = Date.now();
-  // solicitamos respuesta
-  var respuesta_sumatoria=parseInt(prompt("¿Cual es el resultado de la siguiente suma?:  " + num1 + "+" + num2));
-  console.log(num1, num2);
-  var tiempo_final = Date.now();
-  // sacamos tiempo en que tardo en contestar
-  var timer = (tiempo_final-tiempo_incial)/1000;
-  // confirmamos que la respuesta sea correcta
-  if (respuesta_sumatoria == suma){;
-    document.write("</br><h3> Ejercicio 2 -> sumatoria de aleatorio</h3>");
-    document.write("Correcto, tardaste: " + timer + " seg en contestar");
-  }
-  else{
-    document.write("</br><h3> Ejercicio 2 -> sumatoria de aleatorio</h3>");
-    document.write("Incorrecto, tardaste: " +  + timer + " seg en contestar");
-  }
-  return null;
+    let tiempoInicio = Date.now();
+    let respuesta = prompt ("Resuelva la siguiente suma: " + num1 +" + " + num2);
+    let tiempoFinal = Date.now();
+
+    let tiempo = (tiempoFinal- tiempoInicio) / 1000;
+
+    let res_prob = `Tu respuesta es ${respuesta == resultado ? 'correcta' : 'incorrecta'} y tardaste ${tiempo} segundos en responder.`;
+    document.getElementById("res_prob2").innerHTML = res_prob;
 }
 
-document.getElementById("suma").innerHTML = numeros_aleatorios();
+let boton_prob3 = document.getElementById("problema3");
+var x = [-48 , 1 , 44 , 0 , -10 , 13 , -8 , 19 , -40 , -0 , -23 , -8 , 41 , -43 , 16 , 0 , 25 , 40 , -45 , -35 ];
+function prob3(arreglo){
+    let negativos = 0;
+    let ceros = 0; 
+    let positivos = 0;
 
-// Ejercio 3, extraccion de numeros de un arreglo
-function recorrer_arreglo(){
-  const arreglo = [-4,7,4,-6,8,-5,1,6,9,-14,-73,34,56,-81,0,0,0];
-  var cont_negativos = 0;
-  var cont_ceros = 0;
-  var cont_positivos = 0;
-// recorrer arreglo
-  for(let i = 1; i< arreglo.length; i++){
-    if(arreglo[i]==0){
-      cont_ceros++;
-    } else if (arreglo[i]<0){
-      cont_negativos++
-    }else{
-      cont_positivos++;
+    for (let i = 0; i < arreglo.length; i++){
+        if (arreglo[i] < 0){
+            negativos++;
+        } 
+        else if (arreglo[i] == 0){
+            ceros++;
+        }
+        else {
+            positivos++;
+        }
     }
-  }
-  document.write("</br><h3> Ejercicio 3 -> recorrer arreglo</h3>");
-  document.write("Cantidad de 0: " + cont_ceros + ("  Cantidad mayores a 0: " + cont_positivos + "  Cantidad menores a 0: " + cont_negativos));
-  return null;
+    let res_prob = `Arreglo: ${x}<br> Numeros -s: ${negativos}<br> 0s: ${ceros}<br> Numeros +s: ${positivos}<br>`;
+    document.getElementById("res_prob3").innerHTML = res_prob;
 }
-document.getElementById("arreglo1").innerHTML = recorrer_arreglo();
 
-//Ejercio 4, promedio de cada renglon de matriz
-function matriz(){
-  const matriz = [[1,2,3,4,5],[7,24,65,23,5],[5,72,3,4,65]];
-  // nuevo arreglo para promedios
-  let matriz_promedio = [];
-  var suma = 0;
-  // recorrer filas y columnas
-  for(let i = 0; i < matriz.length; i++){
-    suma = 0;
-    for(let j = 0; j < matriz[i].length; j++){
-      suma += matriz[i][j];
+let boton_prob4 = document.getElementById("problema4");
+let y = [[22 , 70 , 56 , 6 , 84 , 66 ],[33 , 99 , 18 , 57 , 14 , 25],[62 , 92 , 4 , 97 , 8 , 74 ],[71 , 50 , 64 , 97 , 73 , 74 ],[12 , 20 , 24 , 57 , 59 , 26],[90 , 130 , 351 , 20 , 47 , 375]];
+let matriz = "[22 , 70 , 56 , 6 , 84 , 66 ],[33 , 99 , 18 , 57 , 14 , 25],[62 , 92 , 4 , 97 , 8 , 74 ],[71 , 50 , 64 , 97 , 73 , 74 ],[12 , 20 , 24 , 57 , 59 , 26],[90 , 130 , 351 , 20 , 47 , 375]<br>"
+function prob4(matrix){
+    let promedios = 0;
+    let promedios_array = new Array; 
+    for (let i = 0; i < matrix.length; i++) {
+        let suma = 0;
+        let contador = 0;
+        for (let j = 0; j < matrix[i].length; j++) {
+            suma += matrix[i][j];
+        }
+        contador += suma;
+        promedios = contador/matrix.length;
+        promedios_array.push((" " + promedios.toFixed(2))); 
     }
-    // agregar los promedios a su areglo
-    matriz_promedio.push(suma/matriz[i].length);
-  }
-  document.write("</br><h3> Ejercicio 4 -> promedio</h3>");
-  document.write("El promedio es: " + "[" +  matriz_promedio + "]");
-  return null;
+    let res_prob = `Matriz original: <br> ${matriz} <br> Los promedios son: ${promedios_array}`;
+    document.getElementById("res_prob4").innerHTML = res_prob;
 }
-document.getElementById("promedio").innerHTML = matriz();
 
-// Ejercio 5, inverso
-let numero = parseInt(prompt("Ingresa un numero: "));
-let inverso = 0;
+var numero = Math.floor( Math.random() * 100);
 
-// generar arreglo del numero, dividir caracter por caracter, hacer el inverso y volver a unir el string
-function inverso_numero(numero){
-  document.write("</br><h3> Ejercicio 5 -> numero inverso</h3>");
-  inverso =(numero.toString().split('').reverse().join('')); 
-  document.write("Su inverso es: " + inverso);
-  return null;
+function inverso(numero){
+
+  var invertido = 0
+  var resto = numero
+  do {
+    invertido = invertido * 10 + (resto % 10)
+    resto = Math.floor(resto / 10)
+  } while ( resto > 0 )
+
+  respuesta = "Número = " + numero +"<br></br>" + "Invertido: " + invertido
+  return respuesta
+
 }
-document.getElementById("inverso").innerHTML = inverso_numero(numero);
+document.getElementById("resultados5").innerHTML = inverso(numero);
+
+
+boton_prob1.onclick = prob1;
+boton_prob2.onclick = prob2;
+boton_prob3.onclick = prob3(x);
+boton_prob4.onclick = prob4(y);
