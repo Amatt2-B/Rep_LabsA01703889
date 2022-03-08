@@ -35,7 +35,7 @@ const removerTomate = document.getElementById("removerTomate");
 
 function añadir_Mozarella() {
     let precio_Mozarella = parseInt(document.getElementById("precio_Mozarella").innerHTML);
-    total = total + precio_Mozarella + 45;
+    total = total + precio_Mozarella;
     document.getElementById("total").innerHTML = total;
     cantidad_Mozarella++;
     document.getElementById("cantidad_Mozarella").innerHTML = cantidad_Mozarella;
@@ -43,7 +43,7 @@ function añadir_Mozarella() {
 
 function añadir_Jamon() {
     let precio_Jamon = parseInt(document.getElementById("precio_Jamon").innerHTML);
-    total = total + precio_Jamon + 60;
+    total = total + precio_Jamon;
     document.getElementById("total").innerHTML = total;
     cantidad_Jamon++;
     document.getElementById("cantidad_Jamon").innerHTML = cantidad_Jamon;
@@ -51,7 +51,7 @@ function añadir_Jamon() {
 
 function añadir_Tomate() {
     let precio_Tomate = parseInt(document.getElementById("precio_Tomate").innerHTML);
-    total = total + precio_Tomate + 25;
+    total = total + precio_Tomate;
     document.getElementById("total").innerHTML = total;
     cantidad_Tomate++;
     document.getElementById("cantidad_Tomate").innerHTML = cantidad_Tomate;
@@ -59,23 +59,16 @@ function añadir_Tomate() {
 
 function rem_Mozarella() {
     let precio_Mozarella = parseInt(document.getElementById("precio_Mozarella").innerHTML);
-    total = total + precio_Mozarella - 45;
+    total = total - precio_Mozarella;
     document.getElementById("total").innerHTML = total;
     cantidad_Mozarella--;
     document.getElementById("cantidad_Mozarella").innerHTML = cantidad_Mozarella;
 }
 
-function rem_Mozarella() {
-    let precio_Mozarella = parseInt(document.getElementById("precio_Mozarella").innerHTML);
-    total = total - precio_Mozarella - 45;
-    document.getElementById("total").innerHTML = total;
-    cantidad_Mozarella--;
-    document.getElementById("cantidad_Mozarella").innerHTML = cantidad_Mozarella;
-}
 
 function rem_Jamon() {
     let precio_Jamon = parseInt(document.getElementById("precio_Jamon").innerHTML);
-    total = total - precio_Jamon - 60 ;
+    total = total - precio_Jamon ;
     document.getElementById("total").innerHTML = total;
     cantidad_Jamon--;
     document.getElementById("cantidad_Jamon").innerHTML = cantidad_Jamon;
@@ -83,7 +76,7 @@ function rem_Jamon() {
 
 function rem_Tomate() {
     let precio_Tomate = parseInt(document.getElementById("precio_Tomate").innerHTML);
-    total = total - precio_Tomate - 25;
+    total = total - precio_Tomate;
     document.getElementById("total").innerHTML = total;
     cantidad_Tomate--;
     document.getElementById("cantidad_Tomate").innerHTML = cantidad_Tomate;
