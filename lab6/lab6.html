@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Laboratorio 6</title>
+</head>
+
+
+<body>
+
+    <h1>Laboratorio 6: Programación orientada a eventos </h1>
+
+    <section id="validacion">
+        <h2>Validacion de contraseña</h2>
+        <label for="contraseña"> Contraseña</label>
+        <input type="password" id="contraseña" placeholder="Ingrese su contraseña">
+        <label for="confirm_contraseña">Confirmar contraseña</label>
+        <input type="password" id="confirm_contraseña" placeholder="Confirme su contraseña">
+        <p id="mensaje"></p>
+        <input type="button" onclick="checarContraseña()" value="SUBMIT"/>
+    </section>
+
+
+    <section class="carritoProducto">
+
+        <h2>Carrito de compras</h2>
+
+        <section class="producto">
+            <h2>Queso Mozarella</h2>
+            <h3> $ <span id="precio_Mozarella"> 45 </span></h3>
+            <p id="cantidad_Mozarella"> 0 </p>
+            <button id="añadirMozarella"> + </button>
+            <button id="removerMozarella"> - </button>
+    
+
+            <h2>Jamón</h2>
+            <h3> $ <span id="precio_Jamon"> 60 </span></h3>
+            <p id="cantidad_Jamon"> 0 </p>
+            <button id="añadirJamon"> + </button>
+            <button id="removerJamon"> - </button>
+    
+
+            <h2>Tomate</h2>
+            <h3> $ <span id="precio_Tomate"> 60 </span></h3>
+            <p id="cantidad_Tomate"> 0 </p>
+            <button id="añadirTomate"> + </button>
+            <button id="removerTomate"> - </button>
+
+            <h2>Total: <a id="total">0</a></h2>
+        </section>
+    </section>
+
+    <section>
+        <h3> Preguntas: </h3>
+        <p> 1. ¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor? </p>
+        <br>
+        <p> R1. Para que el usuario tenga una manera mas facil de saber que caracteres no son validos</p>
+        <br>
+        <p> 2. ¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript? </p>
+        <br>
+        <p> R2. Deshabilitanfo los scripts en el navegador</p>
+        <br>
+        <p> 3. Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿Por qué la primera pregunta dice que es una buena práctica?</p>
+        <br>
+        <p> R3. Evitar vulnerabilidades en las paginas</p>
+
+    </section>
+      
+
+<script src="./lab6.js"></script>
+
+
+<footer>
+    <h4>Adrian Matute Beltran  A01703889</h4>
+    <h4>a01703889@tec.mx</h4>
+    <h4><a href="https://code.visualstudio.com/">Visita el blog de Visual Studio Code</a></h4>
+  </footer>
+  
+
+</body>
+</html>
